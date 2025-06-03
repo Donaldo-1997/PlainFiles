@@ -5,6 +5,10 @@ VisualStudioVersion = 17.13.35818.85 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicTextFile", "BasicTextFile\BasicTextFile.csproj", "{0AE8D13A-24FA-4B2E-8A81-113216F4017F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogginWithStreamWriter", "LogginWithStreamWriter\LogginWithStreamWriter.csproj", "{50249D14-2503-4808-BC68-37E86FEFCED3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVWhitoutLibraries", "CSVWhitoutLibraries\CSVWhitoutLibraries.csproj", "{1BCF3E95-53B7-48E5-A937-39CBDFDFD67C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{0AE8D13A-24FA-4B2E-8A81-113216F4017F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AE8D13A-24FA-4B2E-8A81-113216F4017F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AE8D13A-24FA-4B2E-8A81-113216F4017F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50249D14-2503-4808-BC68-37E86FEFCED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50249D14-2503-4808-BC68-37E86FEFCED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50249D14-2503-4808-BC68-37E86FEFCED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50249D14-2503-4808-BC68-37E86FEFCED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BCF3E95-53B7-48E5-A937-39CBDFDFD67C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BCF3E95-53B7-48E5-A937-39CBDFDFD67C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BCF3E95-53B7-48E5-A937-39CBDFDFD67C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BCF3E95-53B7-48E5-A937-39CBDFDFD67C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
