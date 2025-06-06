@@ -1,0 +1,11 @@
+2025-06-06T17:08:24 [INFO] Application started
+2025-06-06T17:09:35 [INFO] Application started
+2025-06-06T17:09:58 [INFO] jzuluaga:User logged in successfully
+2025-06-06T17:10:32 [INFO] jzuluaga:User requested to show content
+2025-06-06T17:12:20 [INFO] jzuluaga:User requested to add a person
+2025-06-06T17:13:00 [INFO] jzuluaga:User requested to show content
+2025-06-06T17:13:22 [INFO] jzuluaga:User requested to exit the application
+2025-06-06T17:22:38 [INFO] Application started
+2025-06-06T17:23:07 [INFO] mbedoya:User logged in successfully
+2025-06-06T17:23:25 [INFO] mbedoya:User requested to show content
+2025-06-06T17:23:33 [INFO] mbedoya:User requested to exit the application

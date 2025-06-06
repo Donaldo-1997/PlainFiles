@@ -8,8 +8,19 @@ namespace CSVWhitLibrary;
 
 class Person
 {
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string Age { get; set; }
-   
+    public string Id { get; set; }
+    public string FirstName { get; set; } = null!;
+    public string LastName { get; set; } = null!;
+    public string Phone { get; set; } = null!;
+    public string City { get; set; } = null!;
+    public decimal Balance { get; set; }
+
+    public override string ToString()
+    {
+        return $"ID:{Id,20}" +
+            $"\nNombres: {FirstName,20} {LastName}" +
+            $"\nTeléfono: {Phone,20}" +
+            $"\nCiudad: {City,20}" +
+            $"\nBalance: {Balance,20:C2}\n";
+    }
 }
