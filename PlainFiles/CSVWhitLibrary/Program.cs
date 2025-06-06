@@ -27,7 +27,7 @@ using System.Globalization;
 //        Balance = 1500
 //    },
 //};
-var path = "D:\\ITM\\3 SEMESTRE\\Estructura de Datos y Laboratorio\\PlainFiles";
+var path = "D:\\ITM\\3 SEMESTRE\\Estructura de Datos y Laboratorio\\Prueba";
 var helper = new CSVHelperExample();
 
 string[] users = ["jzuluaga,P@ssw0rd123!,true", "mbedoya,S0yS3gur02025*,false"];
