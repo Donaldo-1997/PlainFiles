@@ -52,6 +52,7 @@ using (logger)
     if (Login())
     {
         logger.WriteLog("INFO", $"{loggedUser}: logged in successfully");
+        SeparatorString("=");
         Console.WriteLine($"Bienvenido {loggedUser} :)");
 
         do
@@ -338,7 +339,7 @@ void ShowBalanceReport()
 bool Login()
 {
     var attempts = 3;
-    var login = true;
+    var login = false;
 
     while (!login && attempts > 0)
     {
