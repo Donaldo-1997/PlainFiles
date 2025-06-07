@@ -27,17 +27,19 @@ using System.Globalization;
 //        Balance = 1500
 //    },
 //};
-var path = "D:\\ITM\\3 SEMESTRE\\Estructura de Datos y Laboratorio\\Prueba";
+var path = "D:\\ITM\\3 SEMESTRE\\Estructura de Datos y Laboratorio\\Pruebas";
+var logger = new LogWriter($"{path}\\log.txt");
 var helper = new CSVHelperExample();
 
-string[] users = ["jzuluaga,P@ssw0rd123!,true", "mbedoya,S0yS3gur02025*,false"];
+var usersTxt = File.ReadAllLines($"{path}\\user.txt");
 string loggedUser = string.Empty;
 
-//helper.Write($"{path}\\people.csv", list);
-//File.WriteAllLines($"{path}\\user.txt", users);
-var usersTxt = File.ReadAllLines($"{path}\\user.txt");
 var readList = helper.Read($"{path}\\people.csv").ToList();
-var logger = new LogWriter($"{path}\\log.txt");
+if(readList.Count() == 0)
+{
+    helper.Write($"{path}\\people.csv", []);
+    readList = helper.Read($"{path}\\people.csv").ToList();
+}
 
 using (logger)
 {
