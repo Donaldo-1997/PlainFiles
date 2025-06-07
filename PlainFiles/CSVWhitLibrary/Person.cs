@@ -17,10 +17,10 @@ class Person
 
     public override string ToString()
     {
-        return $"ID:{Id,20}" +
-            $"\nNombres: {FirstName,20} {LastName}" +
-            $"\nTeléfono: {Phone,20}" +
-            $"\nCiudad: {City,20}" +
-            $"\nBalance: {Balance,20:C2}\n";
+        return $"{"ID".PadRight(10)}: {Id}" +
+            $"\n{"Nombres".PadRight(10)}: {FirstName} {LastName}" +
+            $"\n{"Teléfono".PadRight(10)}: {Phone}" +
+            $"\n{"Ciudad".PadRight(10)}: {City}" +
+            $"\n{"Balance".PadRight(10)}: {Balance:C2}\n";
     }
 }

@@ -51,7 +51,7 @@ using (logger)
 
     if (Login())
     {
-        logger.WriteLog("INFO", $"{loggedUser}:User logged in successfully");
+        logger.WriteLog("INFO", $"{loggedUser}: logged in successfully");
         Console.WriteLine($"Bienvenido {loggedUser} :)");
 
         do
@@ -61,35 +61,37 @@ using (logger)
             switch (opc)
             {
                 case "1":
-                    logger.WriteLog("INFO", $"{loggedUser}:User requested to show content");
+                    logger.WriteLog("INFO", $"{loggedUser}: requested to show content");
                     ShowContent();
                     break;
                 case "2":
-                    logger.WriteLog("INFO", $"{loggedUser}:User requested to add a person");
+                    logger.WriteLog("INFO", $"{loggedUser}: requested to add a person");
                     AddPerson();
                     break;
                 case "3":
-                    logger.WriteLog("INFO", $"{loggedUser}:User requested to edit a person");
+                    logger.WriteLog("INFO", $"{loggedUser}: requested to edit a person");
                     EditPerson();
                     break;
                 case "4":
-                    logger.WriteLog("INFO", $"{loggedUser}:User requested to delete a person");
+                    logger.WriteLog("INFO", $"{loggedUser}: requested to delete a person");
                     DeletePerson();
                     break;
                 case "5":
-                    logger.WriteLog("INFO", $"{loggedUser}:User requested to show balance report");
+                    logger.WriteLog("INFO", $"{loggedUser}: requested to show balance report");
                     ShowBalanceReport();
                     break;
                 case "6":
-                    logger.WriteLog("INFO", $"{loggedUser}:User requested to save changes");
+                    logger.WriteLog("INFO", $"{loggedUser}: requested to save changes");
                     SaveChanges();
                     break;
                 case "0":
-                    logger.WriteLog("INFO", $"{loggedUser}:User requested to exit the application");
+                    SeparatorString("=");
+                    logger.WriteLog("INFO", $"{loggedUser}: requested to exit the application");
                     Console.WriteLine("Saliendo del programa...");
                     break;
                 default:
-                    Console.WriteLine("Opción invállida. Intente nuevamente.");
+                    SeparatorString("=");
+                    Console.WriteLine("Opción inválida. Intente nuevamente.");
                     continue;
             }
         } while (opc != "0");
@@ -102,7 +104,7 @@ using (logger)
 string Menu()
 {
     SeparatorString("=");
-    Console.WriteLine("1. Mostrar contenido");
+    Console.WriteLine("\n1. Mostrar contenido");
     Console.WriteLine("2. Añadir persona");
     Console.WriteLine("3. Editar persona");
     Console.WriteLine("4. Eliminar persona");
@@ -318,25 +320,25 @@ void ShowBalanceReport()
     foreach (var city in cities)
     {
         Console.WriteLine($"\nCiudad: {city}\n");
-        Console.WriteLine("ID\tNombres\tApellidos\tSaldo\n");
+        Console.WriteLine("{0,-5} {1,-10} {2,-10} {3,15}", "ID", "Nombres", "Apellidos", "Saldo");
+        Console.WriteLine("{0,-5} {1,-10} {2,-10} {3,15}", "--", "-------", "---------", "-----");
 
         var totalBalance = 0m;
         foreach (var person in readList.Where(p => p.City.ToUpper() == city))
         {
-            Console.WriteLine($"{person.Id}" +
-                $"\t{person.FirstName}\t{person.LastName}" +
-                $"\t{person.Balance.ToString("N1", CultureInfo.InvariantCulture), 15}");
+            Console.WriteLine("{0,-5} {1,-10} {2,-10} {3,15:N1}",
+                person.Id, person.FirstName, person.LastName, person.Balance);
             totalBalance += person.Balance;
         }
-        Console.WriteLine("\n\t\t\t\t========");
-        Console.WriteLine($"Total: {city}\t\t\t {totalBalance.ToString("N1", CultureInfo.InvariantCulture)}\n\n");
+        Console.WriteLine("{0,43}","----------");
+        Console.WriteLine("{0,-20} {1,23}", $"Total: {city}", $"{totalBalance.ToString("N1", CultureInfo.InvariantCulture)}\n");
     }
 }
 
 bool Login()
 {
     var attempts = 3;
-    var login = false;
+    var login = true;
 
     while (!login && attempts > 0)
     {
@@ -373,5 +375,5 @@ bool Login()
 
 void SeparatorString(string separator)
 {
-    Console.WriteLine(string.Concat(Enumerable.Repeat(separator, 50)));
+    Console.WriteLine(string.Concat(Enumerable.Repeat(separator, 100)));
 }
